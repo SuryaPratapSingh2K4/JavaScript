@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <input type="number" id="num1" class="num1" step="any">
+    <select name="op" id="op">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <input type="number" id="num2" name="num2" step="any">
+<br/>
+<br/>
+    <button onclick="cal()">Calculate</button>
+    <input type="text" id="result" name="result" readonly="">
+</body>
+<script type="text/javascript">
+    function cal(){
+        var nums1 = document.getElementById('num1').value;
+        var nums2 = document.getElementById('num2').value;
+        var opt = document.getElementById('op').value;
+        if(opt == "+"){
+            var result = parseInt(nums1) + parseInt(nums2);
+        }
+        else if(opt == "-"){
+            var result = parseInt(nums1) - parseInt(nums2);
+        }
+        else if(opt == "*"){
+            var result = parseInt(nums1) * parseInt(nums2);
+        }
+        else if(opt == "/"){
+            var result = parseInt(nums1) / parseInt(nums2);
+        }
+        else if(opt == "%"){
+            var result = parseInt(nums1) % parseInt(nums2);
+        }
+        else{
+            alert("Invalid Operator");
+        }
+        document.getElementById("result").value = result;
+    }
+</script>
+</html>
