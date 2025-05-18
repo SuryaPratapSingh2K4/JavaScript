@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            color: orange;
+            font-size: 100px;
+            text-align: center;
+
+        }
+        h1{
+            color: blue;
+            font-size: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body onload="showTime()">
+    <div class="main" id="id"></div>
+    <br/>
+    <br/>
+    <br/>
+    <h1></h1>
+</body>
+<script type="text/javascript">
+    function showTime(){
+        var date = new Date();
+        var hours = date.getHours();
+        var min = date.getMinutes();
+        var sec = date.getSeconds();
+        var session = "AM";
+        if(hours < 10){
+            hours = "0" + hours;
+        }
+        if(min < 10){
+            min = "0" + min;
+        }
+        if(sec < 10){
+            sec = "0" + sec;
+        }
+        if(hours > 12){
+            hours = hours - 12;
+            session = "PM";
+        }
+        var time = hours + " : " + min + " : " + sec + " " + session;
+        document.getElementById("id").innerText = time;
+        document.getElementsByTagName("h1")[0].innerText = time;
+
+        setTimeout(
+            function(){
+                showTime();
+            },
+            1000
+        )
+        
+    }
+        
+</script>
+</html>
