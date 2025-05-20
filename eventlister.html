@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">0</h1>
+    <button id="btn">Click me</button>
+    <button onclick="stop()">Stop</button>
+</body>
+<script type="text/javascript">
+    var c = 0;
+    document.getElementById("btn").addEventListener("click", myFunction);
+
+    function myFunction(){
+        document.getElementById("h1").innerText = c;
+        c++;
+    }
+
+    document.getElementById("btn").addEventListener("mouseenter", redcolor );
+    function redcolor(){
+        document.getElementById("h1").style.color = "red";
+    }
+    document.getElementById("btn").addEventListener("mouseleave", blackcolor );
+    function blackcolor(){
+        document.getElementById("h1").style.color = "black";
+    }
+    function stop(){
+        document.getElementById("btn").removeEventListener("click", myFunction);
+        
+    }
+</script>
+</html>
