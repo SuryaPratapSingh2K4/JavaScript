@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img {
+            text-align: center;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .img img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            
+            
+        }
+
+        .id{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body id="body">
+
+    <div class="img"><img src="tech-stack.png" alt="tech-stack-image"></div>
+    <h1 class="id">Printable things</h1>
+    <p id="data">
+        Materials:
+        Water, cement and sand.
+        Coarse aggregates except the size being 40 mm.
+        Proportion:
+        CC 1:2:4/1:1.5:3 (cement:sand:coarse aggregates by volume unless otherwise specified).
+        Mixing:
+        It is done on a clean, water tight, masonry platform or sheet iron tray of sufficient size.
+        Coarse aggregates and sand are measured in boxes of size 30 cm x 30 cm x 38 cm, the volume being equal to 1.2
+        cft i.e. volume of one bag (50 kg) of cement.
+        All materials are dry. If moist sand is used, compensation is made for bulking.
+        Mixing is done in a mixer and for small work hand mixing may be done.
+        In hand mixing, 2/1.5 boxes of sand are mixed dry thoroughly with one bag of cement and then this mix of cement
+        and sand is spread over 4/3 boxes of coarse aggregates as required and the mixed dry turning at least three
+        times to have uniform mix.
+        Water is then added slowly and gradually with water can while being mixed to the required quantity 25-30 litres
+        per bag of cement to give a plastic mix or required workability and water cement ratio.
+        The whole is mixed thoroughly turning at least three times to produce homogeneous mix.
+        Alternately, coarse aggregates, sand and cement are put sequentially into concrete mixer in the above proportion
+        as required and mixer run to mix materials dry and then water is added gradually 25-30 litres per bag of cement
+        to have required water cement ratio.
+        Mixing is continued to 1.5 -2 mins to get a plastic mix of uniform colour.
+        Mixed concrete is then unloaded to masonry platform/ sheet iron tray.
+        Slump:
+        Regular slump test is carried out to control the dose of water to maintain the consistency.
+        A slump of 4 – 5 cm is allowed for road work.
+        <p />
+        <button onclick="Print()">Print Page</button>
+    <p>
+        Formwork:
+        Centering and shuttering is provided as required as per standard specifications before laying concrete to
+        confine to support or to keep concrete in position.
+        Inner surface of shuttering is oiled to prevent sticking of concrete.
+        The base and formwork over which concrete is to be laid is sprinkled with water before laying concrete.
+        Forms need not be removed before 14 days, but side forms may be removed after 3 days of concreting.
+        It should be removed with care without disturbing/damaging concrete.
+        Laying:
+        Concrete is gently laid in layers not more than 15 cm and compacted by pinning with rods and tamping with wooden
+        tampers or with mechanical vibrators till a dense concrete is obtained.
+        Over-vibration leading to separation of coarse aggregates is to be avoided.
+        Proper compaction ensures absence of honeycomb on concrete surface after removal of formwork.
+        If laying is suspended for unavoidable reasons or for next day’s work, the end is sloped at 300 and made rough
+        for further joining.
+        The sloped portion is roughened, cleaned, watered and a grout of cement slurry is applied before fresh concrete
+        is laid.
+        The same procedure is applied for laying subsequent upper layers.
+        Curing:
+        After 2 hours of laying, concrete is to be kept damp by covering with wet gunny bags or moist sand for 24 hrs
+        and then cured by flooding water by making 7.5 cm high mud wall or by covering with wet sand for 14 days.
+        Special water proof paper may be used to prevent evaporation of water.
+    </p>
+
+</body>
+<script type="text/javascript">
+
+    function Print() {
+        //window.print();
+        var body = document.getElementById("body").innerHTML;
+        var data = document.getElementById("data").innerHTML;
+        document.getElementById("body").innerHTML = data;
+        window.print();
+        document.getElementById("body").innerHTML = body;
+    }
+</script>
+
+</html>
